@@ -1,6 +1,6 @@
-// Simple demo contact form handler
+// Place holder
 document.getElementById('contact-form').addEventListener('submit', function(e){
     e.preventDefault();
-    alert('Thanks! This is a demo form. Set up Formspree/Netlify for real submissions.');
+    alert('Hello.');
     this.reset();
 });

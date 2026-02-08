@@ -40,3 +40,18 @@ form button:hover { background: #005fa3; }
 /* Footer */
 footer { text-align: center; padding: 2rem 1rem; background: #0d1117; color: #fff; }
 footer a { color: #1f6feb; }
+
+
+/* Link for the blog */
+.blog-link {
+    text-align: center;
+    margin: 20px auto;        /* top/bottom + center horizontally */
+    padding: 10px 16px;       /* makes background bigger than text */
+    font-size: large;
+    font-weight: 800;
+    background-color: grey;
+    border-radius: 6px;
+    width: fit-content;       /* background hugs the text */
+    color: #fff;
+    cursor: pointer;
+}
