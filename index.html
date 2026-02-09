@@ -26,41 +26,71 @@
   <section id="about">
     <h2>About Me</h2>
     <p>
-      I'm a South African Software Engineer and Computer Scientist. I love building clean, efficient, and maintainable
+      I am a Software Developer. I love building clean, efficient, and maintainable
       software solutions. Experienced in Java, Spring Boot, Flutter, Angular, and more. I focus on practical solutions
       that just work.
     </p>
   </section>
 
+  <div style="text-align: center; color:blue">
+    <a href="assets/pdf/Mondli_cv.pdf" target="_blank" class="cv-link">
+      View/Download Curriculum Vitae
+    </a>
+    <br>
+    <!-- <a href="assets/pdf/Mondli_letter.pdf" target="_blank" class="cv-link">
+      View/Download Cover Letter
+    </a> -->
+  </div>
+
   <section id="skills">
     <h2>Skills</h2>
+
     <div class="skill-grid">
-      <div class="skill">Java 11/8</div>
-      <div class="skill">Spring Boot</div>
-      <div class="skill">Flutter & Dart</div>
-      <div class="skill">Angular & TypeScript</div>
-      <div class="skill">MySQL / Oracle</div>
-      <div class="skill">REST APIs</div>
-      <div class="skill">Git & GitHub</div>
-      <div class="skill">Linux & DevOps basics</div>
+      <div class="skill" data-skill="java">Java 11 / 8</div>
+      <div class="skill" data-skill="spring">Spring Boot</div>
+      <div class="skill" data-skill="flutter">Flutter & Dart</div>
+      <div class="skill" data-skill="angular">Angular & TypeScript</div>
+      <div class="skill" data-skill="database">MySQL / Oracle</div>
+      <div class="skill" data-skill="rest">REST APIs</div>
+      <div class="skill" data-skill="git">Git & GitHub</div>
+      <div class="skill" data-skill="linux">Linux & DevOps basics</div>
     </div>
   </section>
 
+
   <section id="projects">
     <h2>Projects</h2>
+
     <div class="project-grid">
-      <div class="project">
-        <h3>Scholar Patrol System</h3>
-        <p>Full-stack Spring Boot & Angular system to manage scholar patrol crossings and reports.</p>
-      </div>
-      <div class="project">
-        <h3>Flutter Barcode Scanner App</h3>
-        <p>Mobile & Web app for scanning barcodes and encrypted South African driving licences using ML Kit.</p>
-      </div>
-      <div class="project">
-        <h3>PDF Receipt Generator</h3>
-        <p>Generates structured PDFs using Apache PDFBox with dynamic tables and custom styling.</p>
-      </div>
+
+      <a href="pages/projects/project1.html" class="project-link">
+        <div class="project">
+          <h3>Project 1</h3>
+          <p>Full-stack Spring Boot & Angular system.</p>
+        </div>
+      </a>
+
+      <a href="pages/projects/project2.html" class="project-link">
+        <div class="project">
+          <h3>Project 2</h3>
+          <p>Notes</p>
+        </div>
+      </a>
+
+      <a href="pages/projects/project3.html" class="project-link">
+        <div class="project">
+          <h3>Project 3</h3>
+          <p>Notes.</p>
+        </div>
+      </a>
+
+      <a href="pages/projects/project4.html" class="project-link">
+        <div class="project">
+          <h3>Project 4</h3>
+          <p>Notes.</p>
+        </div>
+      </a>
+
     </div>
   </section>
 
@@ -75,34 +105,88 @@
         <h3>Phone</h3>
         <p><a href="tel:+27831234567">+27 635936822</a></p>
       </div>
-      <!-- <div class="contact-item">
-      <h3>LinkedIn</h3>
-      <p><a href="https://www.linkedin.com/in/mondli" target="_blank">linkedin.com/in/mondli</a></p>
-    </div> -->
+      <div class="contact-item">
+        <h3>LinkedIn</h3>
+        <p><a href="https://www.linkedin.com/in/mondli-masondo-96b71b230" target="_blank">linkedin.com/Mondli</a></p>
+      </div>
       <div class="contact-item">
         <h3>GitHub</h3>
-        <p><a href="https://github.com/MEBZMasondo" target="_blank">github.com/MEBZMasondo</a></p>
+        <p><a href="https://github.com/MEBZMasondo" target="_blank">Github/Mondli</a></p>
       </div>
     </div>
   </section>
 
-
-  <!-- <section id="contact">
-    <h2>Contact</h2>
-    <form id="contact-form">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-    <p class="note">This form is just a demo. GitHub Pages can't send emails directly. Use Formspree or Netlify forms for real submissions.</p>
-  </section> -->
-
   <footer>
-    <p>© 2026 Mondli | <a href="https://github.com/yourusername" target="_blank">GitHub</a></p>
+    <p>© 2026 Mondli | <a href="https://github.com/MEBZMasondo" target="_blank">GitHub</a></p>
   </footer>
 
-  <script src="scripts/includeheader.js"></script>
+  <script src="script.js"></script>
 </body>
 
+<div id="skillModal" class="modal">
+  <div class="modal-content">
+    <button class="close-btn" onclick="closeModal()">×</button>
+    <h3 id="modalTitle"></h3>
+    <div id="modalBody" class="modal-body"></div>
+  </div>
+</div>
+
 </html>
+
+<script>
+  const skillDetails = {
+    java: {
+      title: "Java 8 & 11",
+      body: `
+            <h4>Core Java</h4>
+            <p>OOP, collections, streams, exception handling.</p>
+
+            <h4>Enterprise</h4>
+            <p>DTOs, transactions, logging, clean architecture.</p>
+
+            <h4>Experience</h4>
+            <p>Building government and enterprise systems.</p>
+        `
+    },
+    spring: {
+      title: "Spring Boot",
+      body: `
+            <h4>Backend Services</h4>
+            <p>REST APIs, validation, security, JWT.</p>
+
+            <h4>Persistence</h4>
+            <p>JPA, Hibernate, Oracle & MySQL.</p>
+        `
+    },
+    flutter: {
+      title: "Flutter & Dart",
+      body: `
+            <h4>Mobile Apps</h4>
+            <p>Android, barcode scanning, ML Kit integration.</p>
+
+            <h4>Architecture</h4>
+            <p>Clean UI separation, DTO-based requests.</p>
+        `
+    }
+
+  };
+
+  document.querySelectorAll(".skill").forEach(skill => {
+    skill.addEventListener("click", function () {
+      const key = this.dataset.skill;
+      const data = skillDetails[key];
+
+      if (!data) return;
+
+      document.getElementById("modalTitle").innerHTML = data.title;
+      document.getElementById("modalBody").innerHTML = data.body;
+      document.getElementById("skillModal").style.display = "block";
+      document.body.style.overflow = "hidden";
+    });
+  });
+
+  function closeModal() {
+    document.getElementById("skillModal").style.display = "none";
+    document.body.style.overflow = "auto";
+  }
+</script>
