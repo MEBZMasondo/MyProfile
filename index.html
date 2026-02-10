@@ -38,57 +38,62 @@
     </a>
   </div>
 
-  <section id="skills">
-    <h2>Skills</h2>
+<section class="projects">
+  <h2>Projects</h2>
 
+  <div class="projects-list">
+
+    <!-- Project Row -->
+    <div class="project-row">  
+      <!-- Left: Details -->
+      <div class="project-details">
+        <h3 class="project-title">Scholar Patrol System</h3>
+
+        <p class="project-description">
+          Data-driven system for managing scholar patrol crossings,
+          equipment distribution, and reporting.
+        </p>
+
+        <p class="tech-stack">
+          <strong>Tech:</strong> Java, Spring Boot, Oracle, Angular
+        </p>
+
+        <div class="project-links">
+          <a href="#" target="_blank">View Demo</a>
+          <a href="#" target="_blank">GitHub</a>
+        </div>
+      </div>
+
+      <!-- Right: Image -->
+      <div class="project-image">
+        <img src="assets/images/scholar-patrol.png" alt="Scholar Patrol System">
+      </div>
+
+    </div>
+
+    <!-- Another project  -->
+
+  </div>
+</section>
+
+
+  <section class="skills">
+    <h2>Skills</h2>
     <div class="skill-grid">
-      <div class="skill" data-skill="java">Java 11 / 8</div>
-      <div class="skill" data-skill="spring">Spring Boot</div>
-      <div class="skill" data-skill="flutter">Flutter & Dart</div>
-      <div class="skill" data-skill="angular">Angular & TypeScript</div>
-      <div class="skill" data-skill="database">MySQL / Oracle</div>
+      <div class="skill" data-skill="java">Java</div>
+      <div class="skill" data-skill="spring">Spring</div>
+      <div class="skill" data-skill="flutter">Flutter</div>
+      <div class="skill" data-skill="flutter">Dart</div>
+      <div class="skill" data-skill="angular">Angular</div>
+      <div class="skill" data-skill="angular">TypeScript</div>
+      <div class="skill" data-skill="database">Oracle</div>
+      <div class="skill" data-skill="database">MySQL</div>
       <div class="skill" data-skill="rest">REST APIs</div>
       <div class="skill" data-skill="git">Git & GitHub</div>
-      <div class="skill" data-skill="linux">Linux & DevOps basics</div>
+      <div class="skill" data-skill="linux">Linux & Bash</div>
     </div>
   </section>
 
-
-  <section id="projects">
-    <h2>Projects</h2>
-
-    <div class="project-grid">
-
-      <a href="pages/projects/project1.html" class="project-link">
-        <div class="project">
-          <h3>Project 1</h3>
-          <p>Full-stack Spring Boot & Angular system.</p>
-        </div>
-      </a>
-
-      <a href="pages/projects/project2.html" class="project-link">
-        <div class="project">
-          <h3>Project 2</h3>
-          <p>Notes</p>
-        </div>
-      </a>
-
-      <a href="pages/projects/project3.html" class="project-link">
-        <div class="project">
-          <h3>Project 3</h3>
-          <p>Notes.</p>
-        </div>
-      </a>
-
-      <a href="pages/projects/project4.html" class="project-link">
-        <div class="project">
-          <h3>Project 4</h3>
-          <p>Notes.</p>
-        </div>
-      </a>
-
-    </div>
-  </section>
 
   <section id="contact">
     <h2>Contact Me</h2>
@@ -132,20 +137,20 @@
 <script>
   const skillDetails = {
     java: {
-      title: "Java 8 & 11",
+      title: "Java",
       body: `
             <h4>Core Java</h4>
-            <p>OOP, collections, streams, exception handling.</p>
+            <p>Java 11, OOP, Collections, streams, exception handling.</p>
 
             <h4>Enterprise</h4>
-            <p>DTOs, transactions, logging, clean architecture.</p>
+            <p>DTOs, transactions, logging, MVC architecture.</p>
 
             <h4>Experience</h4>
-            <p>Building government and enterprise systems.</p>
+            <p>Building enterprise systems.</p>
         `
     },
     spring: {
-      title: "Spring Boot",
+      title: "Spring",
       body: `
             <h4>Backend Services</h4>
             <p>REST APIs, validation, security, JWT.</p>
@@ -155,7 +160,7 @@
         `
     },
     flutter: {
-      title: "Flutter & Dart",
+      title: "Flutter",
       body: `
             <h4>Mobile Apps</h4>
             <p>Android, barcode scanning, ML Kit integration.</p>
